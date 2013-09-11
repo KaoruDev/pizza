@@ -3,7 +3,7 @@ module Pizza
 
     attr_accessor :toppings
 
-    def initialize(tops_array)
+    def initialize(tops_array = [Pizza::Topping.new("cheese", vegetarian:true)])
       @toppings = tops_array
     end
 
