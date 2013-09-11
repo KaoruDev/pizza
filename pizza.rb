@@ -1,6 +1,12 @@
 module Pizza
   class Pie
 
+    attr_accessor :toppings
+
+    def initialize(tops_array)
+      @toppings = tops_array
+    end
+
   end
 
   class Topping
