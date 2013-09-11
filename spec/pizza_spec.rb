@@ -4,7 +4,17 @@ require 'rspec'
 require_relative '../pizza'
 
 describe Pizza::Pie do
+  describe '.initialize' do
+    it 'records all of the toppings' do
+      topping = [
+        Pizza:Topping.new('mushrooms', vegetarian: true),
+        Pizza:Topping.new('pepperoni')
+      ]
+      pizza = Pizza::Pie.new(toppings)
 
+      expect(pizza.toppings).to eq(toppings)
+    end
+  end
 end 
 
 describe Pizza::Topping do
@@ -16,7 +26,10 @@ describe Pizza::Topping do
     end
 
     it 'sets whether or not the topping is vegetarian' do
-      topping = Pizza::Topping.new 'bell peppers', vergetarian: true
+      # vegetarian: true is a keyword arguement
+      # i.e. we don't have to memorize the order of it and pass something by doing vegetarian
+      topping = Pizza::Topping.new 'bell peppers', vegetarian: true
+
 
       expect(topping.vegetarian).to eq(true)
     end
