@@ -4,9 +4,7 @@ require 'rspec'
 require_relative '../pizza'
 
 describe Pizza::Pie do
-  context "some sort of context" do
-    
-  end
+  
 end 
 
 describe Pizza::Topping do
